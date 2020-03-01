@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,  
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "outDir": "dist",
+    "sourceMap": true
+  }
+}

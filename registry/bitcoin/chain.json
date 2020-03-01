@@ -1,0 +1,10 @@
+{
+  "name": "Bitcoin",
+  "addressTypes": ["p2pkh"],
+  "network": "bitcoin",
+  "bip44": 0,
+  "explorers": [{
+    "tx":"https://www.blockchain.com/btc/tx/$1",
+    "addr":"https://www.blockchain.com/btc/address/$1"
+  }]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "Heat",
+  "bip44": 286,
+  "addressTypes":["0"],
+  "explorers": [{
+    "tx": "https://heatwallet.com/#/explorer-results/transactions/$1",
+    "addr":"https://heatwallet.com/#/explorer-account/$1/transactions"
+  }],
+  "staticFee": "0.01",
+  "assetTypes": [{
+    "id":1,
+    "name":"Asset"
+  }]
+}

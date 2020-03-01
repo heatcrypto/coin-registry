@@ -1,0 +1,13 @@
+{
+  "name": "Ethereum",
+  "addressTypes":["0"],
+  "bip44": 60,
+  "explorers": [{
+    "tx": "https://etherscan.io/tx/$1",
+    "addr": "https://etherscan.io/address/$1"
+  }],
+  "assetTypes": [{
+    "id":1,
+    "name":"Erc20"
+  }]
+}
