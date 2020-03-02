@@ -29,15 +29,18 @@ ChainModel.fromJson = (json, id) => {
     let { name, addressTypes, bip44, explorers, assetTypes, network, staticFee } = json;
     addressTypes = addressTypes || ["0"];
     explorers = explorers || [];
-    assetTypes = assetTypes || [{
+    assetTypes = assetTypes || [];
+    const chain = new ChainModel(id, name, addressTypes, network, [], bip44, [], staticFee);
+    chain.assetTypes = assetTypes.map(x => asset_type_model_1.AssetTypeModel.fromJson(x, chain));
+    chain.explorers = explorers.map(x => explorer_model_1.ExplorerModel.fromJson(x));
+    if (!chain.assetTypes.find(x => x.id === 0)) {
+        chain.assetTypes.push(asset_type_model_1.AssetTypeModel.fromJson({
             id: 0,
             name: 'Native',
             currencies: [],
             explorers: [],
-        }];
-    const chain = new ChainModel(id, name, addressTypes, network, [], bip44, [], staticFee);
-    chain.assetTypes = assetTypes.map(x => asset_type_model_1.AssetTypeModel.fromJson(x, chain));
-    chain.explorers = explorers.map(x => explorer_model_1.ExplorerModel.fromJson(x));
+        }, chain));
+    }
     return chain;
 };
 ChainModel.fromCompressedJson = (data) => {

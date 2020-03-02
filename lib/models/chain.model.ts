@@ -22,12 +22,7 @@ export class ChainModel {
     let { name, addressTypes, bip44, explorers, assetTypes, network, staticFee } = json;
     addressTypes = addressTypes || ["0"];
     explorers = explorers || []
-    assetTypes = assetTypes || [{
-      id: 0,
-      name: 'Native',
-      currencies: [],
-      explorers: [],
-    }]
+    assetTypes = assetTypes || []
     const chain = new ChainModel(
       id,
       name,
@@ -40,6 +35,16 @@ export class ChainModel {
     );
     chain.assetTypes = assetTypes.map(x => AssetTypeModel.fromJson(x, chain));
     chain.explorers = explorers.map(x => ExplorerModel.fromJson(x));
+
+    // if there is no Native assetType we add that.
+    if (!chain.assetTypes.find(x => x.id === 0)) {
+      chain.assetTypes.push(AssetTypeModel.fromJson({
+        id: 0,
+        name: 'Native',
+        currencies: [],
+        explorers: [],
+      },chain))
+    }
     return chain;
   }
 
