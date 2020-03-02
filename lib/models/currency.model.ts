@@ -29,7 +29,6 @@ export class CurrencyModel {
   }
 
   toCompressedJson = () => [
-    this._assetType,
     this.assetId,
     this.name,
     this.symbol,
@@ -38,17 +37,16 @@ export class CurrencyModel {
     this.isUtxo,
   ];
 
-  static fromCompressedJson = (data: Array<any>, chain: ChainModel) => {
-    const _assetType = data[0];
-    const assetId = data[1];
-    const name = data[2];
-    const symbol = data[3];
-    const decimals = data[4];
-    const iconHref = data[5];
-    const isUtxo = data[6];
+  static fromCompressedJson = (data: Array<any>, chain: ChainModel, assetTypeId: number) => {
+    const assetId = data[0];
+    const name = data[1];
+    const symbol = data[2];
+    const decimals = data[3];
+    const iconHref = data[4];
+    const isUtxo = data[5];
     return new CurrencyModel(
       chain,
-      _assetType,
+      assetTypeId,
       assetId,
       name,
       symbol,

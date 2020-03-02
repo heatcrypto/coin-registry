@@ -30,11 +30,12 @@ export class AssetTypeModel {
   ]);
 
   static fromCompressedJson = (data: Array<any>, chain:ChainModel) => {
+    const id = data[0]
     return new AssetTypeModel(
       chain,
-      data[0], 
+      id, 
       data[1],
-      data[2].map(x => CurrencyModel.fromCompressedJson(x, chain)),
+      data[2].map(x => CurrencyModel.fromCompressedJson(x, chain, id)),
       data[3].map(x => ExplorerModel.fromCompressedJson(x))
     );
   };
