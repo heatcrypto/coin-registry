@@ -23,6 +23,7 @@ AssetTypeModel.fromJson = (json, chain) => {
     return new AssetTypeModel(chain, id, name, [], explorers || []);
 };
 AssetTypeModel.fromCompressedJson = (data, chain) => {
-    return new AssetTypeModel(chain, data[0], data[1], data[2].map(x => currency_model_1.CurrencyModel.fromCompressedJson(x, chain)), data[3].map(x => explorer_model_1.ExplorerModel.fromCompressedJson(x)));
+    const id = data[0];
+    return new AssetTypeModel(chain, id, data[1], data[2].map(x => currency_model_1.CurrencyModel.fromCompressedJson(x, chain, id)), data[3].map(x => explorer_model_1.ExplorerModel.fromCompressedJson(x)));
 };
 //# sourceMappingURL=asset-type.model.js.map

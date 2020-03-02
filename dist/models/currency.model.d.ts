@@ -12,7 +12,7 @@ export declare class CurrencyModel {
     constructor(_chain: ChainModel, _assetType: number, assetId: string, name: string, symbol: string, decimals: number, iconHref: string, isUtxo: boolean);
     static fromJson: (json: any, chain: ChainModel, assetType: AssetTypeModel, assetId: string, iconHref: string) => CurrencyModel;
     toCompressedJson: () => (string | number | boolean)[];
-    static fromCompressedJson: (data: any[], chain: ChainModel) => CurrencyModel;
+    static fromCompressedJson: (data: any[], chain: ChainModel, assetTypeId: number) => CurrencyModel;
     get id(): string;
     get assetType(): AssetTypeModel;
 }

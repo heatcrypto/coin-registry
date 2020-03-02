@@ -11,7 +11,6 @@ class CurrencyModel {
         this.iconHref = iconHref;
         this.isUtxo = isUtxo;
         this.toCompressedJson = () => [
-            this._assetType,
             this.assetId,
             this.name,
             this.symbol,
@@ -32,14 +31,13 @@ CurrencyModel.fromJson = (json, chain, assetType, assetId, iconHref) => {
     const { name, symbol, decimals, isUtxo } = json;
     return new CurrencyModel(chain, assetType.id, assetId, name, symbol, decimals, iconHref, isUtxo);
 };
-CurrencyModel.fromCompressedJson = (data, chain) => {
-    const _assetType = data[0];
-    const assetId = data[1];
-    const name = data[2];
-    const symbol = data[3];
-    const decimals = data[4];
-    const iconHref = data[5];
-    const isUtxo = data[6];
-    return new CurrencyModel(chain, _assetType, assetId, name, symbol, decimals, iconHref, isUtxo);
+CurrencyModel.fromCompressedJson = (data, chain, assetTypeId) => {
+    const assetId = data[0];
+    const name = data[1];
+    const symbol = data[2];
+    const decimals = data[3];
+    const iconHref = data[4];
+    const isUtxo = data[5];
+    return new CurrencyModel(chain, assetTypeId, assetId, name, symbol, decimals, iconHref, isUtxo);
 };
 //# sourceMappingURL=currency.model.js.map
