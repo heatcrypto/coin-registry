@@ -3,6 +3,7 @@ import * as path from 'path'
 import * as _fs from 'fs'
 import { ChainModel } from './models/chain.model'
 import { CurrencyModel } from './models/currency.model'
+import { getDirs } from './utils/get-dirs'
 const fs = _fs.promises
 
 const registryDir = path.join(__dirname, '..', 'registry')
@@ -101,26 +102,6 @@ function validateChainModel(chainModel: ChainModel, chainDir: string) {
     if (!_fs.existsSync(dir))
       throw new Error(`Missing directory for asset type at ${dir}`)
   }
-}
-
-/**
- * Returns all child directories of a parent directory
- * @param rootDir 
- */
-async function getDirs(rootDir: string) {
-  const files = await fs.readdir(rootDir)
-  const dirs = []
-  for (var index = 0; index < files.length; ++index) { 
-    const file = files[index]; 
-    if (file[0] !== '.') { 
-      const filePath = rootDir + '/' + file; 
-      const stat = await fs.stat(filePath)
-      if (stat.isDirectory()) { 
-          dirs.push(file); 
-      } 
-    }
-  }  
-  return dirs
 }
 
 build();
