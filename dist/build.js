@@ -12,6 +12,7 @@ const path = __importStar(require("path"));
 const _fs = __importStar(require("fs"));
 const chain_model_1 = require("./models/chain.model");
 const currency_model_1 = require("./models/currency.model");
+const get_dirs_1 = require("./utils/get-dirs");
 const fs = _fs.promises;
 const registryDir = path.join(__dirname, '..', 'registry');
 const distDir = path.join(__dirname, '..', 'dist');
@@ -34,7 +35,7 @@ async function build() {
         for (let j = 0; j < chainModel.assetTypes.length; j++) {
             const assetTypeModel = chainModel.assetTypes[j];
             const assetTypeDir = path.join(chainDir, `${assetTypeModel.id}`);
-            const currencyIds = (await getDirs(assetTypeDir)).map(dir => path.basename(dir));
+            const currencyIds = (await get_dirs_1.getDirs(assetTypeDir)).map(dir => path.basename(dir));
             for (let k = 0; k < currencyIds.length; k++) {
                 const currencyId = currencyIds[k];
                 const currencyDir = path.join(assetTypeDir, `${currencyId}`);
@@ -84,21 +85,6 @@ function validateChainModel(chainModel, chainDir) {
         if (!_fs.existsSync(dir))
             throw new Error(`Missing directory for asset type at ${dir}`);
     }
-}
-async function getDirs(rootDir) {
-    const files = await fs.readdir(rootDir);
-    const dirs = [];
-    for (var index = 0; index < files.length; ++index) {
-        const file = files[index];
-        if (file[0] !== '.') {
-            const filePath = rootDir + '/' + file;
-            const stat = await fs.stat(filePath);
-            if (stat.isDirectory()) {
-                dirs.push(file);
-            }
-        }
-    }
-    return dirs;
 }
 build();
 //# sourceMappingURL=build.js.map

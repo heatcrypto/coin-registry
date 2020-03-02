@@ -29,6 +29,7 @@ async function run() {
 
     // Create the token currency.json file
     const tokenDir = path.join(ethereumTokenDir, address)
+    _fs.mkdirSync(tokenDir); 
     const currencyJsonFile = path.join(tokenDir, 'currency.json')
     await fs.writeFile(currencyJsonFile, JSON.stringify({
       name,
