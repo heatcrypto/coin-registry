@@ -1,0 +1,6 @@
+{
+  "name": "Litecoin",
+  "symbol": "LTC",
+  "decimals": 8,
+  "isUtxo": true
+}

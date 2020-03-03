@@ -1,5 +1,10 @@
 {
-  "bitcoin":0,
-  "ethereum":1,
-  "heat":2
+  "bitcoin": 0,
+  "ethereum": 1,
+  "heat": 2,
+  "litecoin": 3,
+  "bitcoincash": 4,
+  "fimk": 5,
+  "heattestnet": 6,
+  "bitcointestnet": 7
 }

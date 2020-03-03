@@ -1,0 +1,10 @@
+{
+  "name": "Bitcoin Cash",
+  "addressTypes": ["p2pkh"],
+  "network": "bitcoincash",
+  "bip44": 145,
+  "explorers": [{
+    "addr": "https://explorer.bitcoin.com/bch/address/$1",
+    "tx": "https://explorer.bitcoin.com/bch/tx/$1"
+  }]
+}

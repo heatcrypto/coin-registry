@@ -1,0 +1,10 @@
+{
+  "name": "Litecoin",
+  "addressTypes": ["p2pkh"],
+  "network": "litecoin",
+  "bip44": 2,
+  "explorers": [{
+    "tx": "https://live.blockcypher.com/ltc/tx/$1/",
+    "addr": "https://live.blockcypher.com/ltc/address/$1/"
+  }]
+}

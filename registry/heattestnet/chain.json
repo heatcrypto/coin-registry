@@ -1,0 +1,11 @@
+{
+  "name": "Heat Testnet",
+  "bip44": 286,
+  "addressTypes":["0"],
+  "explorers": [],
+  "staticFee": "0.01",
+  "assetTypes": [{
+    "id":1,
+    "name":"Asset"
+  }]
+}

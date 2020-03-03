@@ -1,5 +1,5 @@
 {
-  "name": "BTC Heat Asset",
-  "symbol": "BTC",
+  "name": "BTC Asset",
+  "symbol": "hBTC",
   "decimals": 8
 }

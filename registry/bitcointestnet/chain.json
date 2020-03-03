@@ -1,0 +1,10 @@
+{
+  "name": "Bitcoin Testnet",
+  "addressTypes": ["p2pkh"],
+  "network": "testnet",
+  "bip44": 1,
+  "explorers": [{
+    "tx": "https://live.blockcypher.com/btc-testnet/tx/$1/",
+    "addr":"https://live.blockcypher.com/btc-testnet/address/$1/"
+  }]
+}

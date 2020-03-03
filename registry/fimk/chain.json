@@ -1,0 +1,13 @@
+{
+  "name": "FIMK",
+  "bip44": 471,
+  "addressTypes":["0"],
+  "explorers": [{
+    "addr": "https://lompsa.com/#/accounts/$1/activity/latest"
+  }],
+  "staticFee": "0.1",
+  "assetTypes": [{
+    "id":1,
+    "name":"Asset"
+  }]
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Bitcoin Cash",
+  "symbol": "BCH",
+  "decimals": 8,
+  "isUtxo": true
+}
