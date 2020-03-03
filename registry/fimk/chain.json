@@ -8,6 +8,6 @@
   "staticFee": "0.1",
   "assetTypes": [{
     "id":1,
-    "name":"Asset"
+    "name":"FIMK Asset"
   }]
 }

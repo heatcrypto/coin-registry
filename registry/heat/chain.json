@@ -9,6 +9,6 @@
   "staticFee": "0.01",
   "assetTypes": [{
     "id":1,
-    "name":"Asset"
+    "name":"HEAT Asset"
   }]
 }
