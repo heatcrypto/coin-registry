@@ -1,5 +1,5 @@
 # coin-registry
-Registry of coin and token information for use in HEAT wallet platform.
+Registry of coin and token information for use in HEAT mobile wallet platform.
 
 Provides information on coins and tokens, included are:
 
