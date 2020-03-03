@@ -16,6 +16,8 @@
   "devDependencies": {
     "@types/lodash": "^4.14.149",
     "@types/node": "^13.7.7",
+    "@types/request": "^2.48.4",
+    "@types/request-promise": "^4.1.45",
     "lodash": "^4.17.15",
     "rimraf": "^3.0.2",
     "typescript": "^3.8.3"

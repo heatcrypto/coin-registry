@@ -1,17 +1,16 @@
 import * as fs from 'fs'
-const request = require('request');
-const rp = require('request-promise');
+import * as request from 'request'
+import * as rp from 'request-promise'
 
 export async function downloadJson(sourceUrl:string) {
-  const sourceData = await rp(sourceUrl)
+  const sourceData = await rp.get(sourceUrl)
   return JSON.parse(sourceData)
 }
 
-export function downloadFile(sourceUrl: string, destination: string) {
-  let file = fs.createWriteStream(destination);
-  return new Promise((resolve, reject) => {
-    let stream = request({
-      uri: sourceUrl,
+export async function downloadFile(sourceUrl: string, destination: string) {
+  try {
+    const options: request.CoreOptions = {
+      encoding: null,
       headers: {
         'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
         'Accept-Encoding': 'gzip, deflate, br',
@@ -20,20 +19,15 @@ export function downloadFile(sourceUrl: string, destination: string) {
         'Connection': 'keep-alive',
         'Upgrade-Insecure-Requests': '1',
         'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36'
-      },
-      /* GZIP true for most of the websites now, disable it if you don't need it */
-      gzip: true
-    })
-      .pipe(file)
-      .on('finish', () => {
-        console.log(`The file is finished downloading.`);
-        resolve();
-      })
-      .on('error', (error) => {
-        reject(error);
-      })
-  })
-    .catch(error => {
-      console.log(`Something happened: ${error}`);
-    });
+      },    
+      gzip: true,
+    };
+    const res = await rp.get(sourceUrl, options)
+    const buffer = Buffer.from(res, 'utf8');
+    fs.writeFileSync(destination, buffer);
+    return true
+  } catch (e) {
+    console.log(`Download failed. ${e}`);
+    return false
+  }
 }

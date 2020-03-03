@@ -42,7 +42,8 @@ async function build() {
         const currencyDir = path.join(assetTypeDir, `${currencyId}`)
         const currencyJsonFile = path.join(currencyDir, 'currency.json')
         const currencyJson = JSON.parse(await fs.readFile(currencyJsonFile, 'utf8'))
-        const iconHref = path.relative(registryDir, path.join(currencyDir, 'logo.png'));
+        const iconPath = path.join(currencyDir, 'logo.png')
+        const iconHref = !_fs.existsSync(iconPath) ? null : path.relative(registryDir, iconPath)
         const currencyModel = CurrencyModel.fromJson(currencyJson, chainModel, assetTypeModel, currencyId, iconHref)
 
         assetTypeModel.currencies.push(currencyModel);

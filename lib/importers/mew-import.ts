@@ -69,5 +69,4 @@ async function downloadLogoFromTrustAssets(address:string, logoPngFile:string):P
   return _fs.existsSync(logoPngFile)
 }
 
-
 run();

@@ -8,18 +8,16 @@ var __importStar = (this && this.__importStar) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const fs = __importStar(require("fs"));
-const request = require('request');
-const rp = require('request-promise');
+const rp = __importStar(require("request-promise"));
 async function downloadJson(sourceUrl) {
-    const sourceData = await rp(sourceUrl);
+    const sourceData = await rp.get(sourceUrl);
     return JSON.parse(sourceData);
 }
 exports.downloadJson = downloadJson;
-function downloadFile(sourceUrl, destination) {
-    let file = fs.createWriteStream(destination);
-    return new Promise((resolve, reject) => {
-        let stream = request({
-            uri: sourceUrl,
+async function downloadFile(sourceUrl, destination) {
+    try {
+        const options = {
+            encoding: null,
             headers: {
                 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
                 'Accept-Encoding': 'gzip, deflate, br',
@@ -29,20 +27,17 @@ function downloadFile(sourceUrl, destination) {
                 'Upgrade-Insecure-Requests': '1',
                 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36'
             },
-            gzip: true
-        })
-            .pipe(file)
-            .on('finish', () => {
-            console.log(`The file is finished downloading.`);
-            resolve();
-        })
-            .on('error', (error) => {
-            reject(error);
-        });
-    })
-        .catch(error => {
-        console.log(`Something happened: ${error}`);
-    });
+            gzip: true,
+        };
+        const res = await rp.get(sourceUrl, options);
+        const buffer = Buffer.from(res, 'utf8');
+        fs.writeFileSync(destination, buffer);
+        return true;
+    }
+    catch (e) {
+        console.log(`Download failed. ${e}`);
+        return false;
+    }
 }
 exports.downloadFile = downloadFile;
 //# sourceMappingURL=download.js.map
