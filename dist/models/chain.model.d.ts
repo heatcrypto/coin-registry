@@ -9,7 +9,8 @@ export declare class ChainModel {
     bip44: number;
     explorers: Array<ExplorerModel>;
     staticFee: string;
-    constructor(id: number, name: string, addressTypes: Array<string>, network: string, assetTypes: Array<AssetTypeModel>, bip44: number, explorers: Array<ExplorerModel>, staticFee: string);
+    bip21: string;
+    constructor(id: number, name: string, addressTypes: Array<string>, network: string, assetTypes: Array<AssetTypeModel>, bip44: number, explorers: Array<ExplorerModel>, staticFee: string, bip21: string);
     static fromJson: (json: any, id: number) => ChainModel;
     toCompressedJson: () => (string | number | string[] | (string | number | (string | number | boolean)[][])[][])[];
     static fromCompressedJson: (data: any[]) => ChainModel;

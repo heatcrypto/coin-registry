@@ -10,5 +10,6 @@
   "assetTypes": [{
     "id":1,
     "name":"HEAT Asset"
-  }]
+  }],
+  "bip21": "heat"
 }

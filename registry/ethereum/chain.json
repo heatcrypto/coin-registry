@@ -9,5 +9,6 @@
   "assetTypes": [{
     "id":1,
     "name":"Ethereum Erc20"
-  }]
+  }],
+  "bip21": "ethereum"
 }

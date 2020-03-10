@@ -6,5 +6,6 @@
   "explorers": [{
     "addr": "https://explorer.bitcoin.com/bch/address/$1",
     "tx": "https://explorer.bitcoin.com/bch/tx/$1"
-  }]
+  }],
+  "bip21": "bitcoincash"
 }

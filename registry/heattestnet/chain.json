@@ -7,5 +7,6 @@
   "assetTypes": [{
     "id":1,
     "name":"HEAT Testnet Asset"
-  }]
+  }],
+  "bip21": "heattestnet"
 }

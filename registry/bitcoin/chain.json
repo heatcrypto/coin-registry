@@ -6,5 +6,6 @@
   "explorers": [{
     "tx":"https://www.blockchain.com/btc/tx/$1",
     "addr":"https://www.blockchain.com/btc/address/$1"
-  }]
+  }],
+  "bip21": "bitcoin"
 }

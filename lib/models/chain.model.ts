@@ -16,10 +16,11 @@ export class ChainModel {
     public bip44: number,
     public explorers: Array<ExplorerModel>,
     public staticFee: string,
+    public bip21: string,
   ) { }
 
   static fromJson = (json: any, id: number) => {
-    let { name, addressTypes, bip44, explorers, assetTypes, network, staticFee } = json;
+    let { name, addressTypes, bip44, explorers, assetTypes, network, staticFee, bip21 } = json;
     addressTypes = addressTypes || ["0"];
     explorers = explorers || []
     assetTypes = assetTypes || []
@@ -32,6 +33,7 @@ export class ChainModel {
       bip44,
       [],
       staticFee,
+      bip21
     );
     chain.assetTypes = assetTypes.map(x => AssetTypeModel.fromJson(x, chain));
     chain.explorers = explorers.map(x => ExplorerModel.fromJson(x));
@@ -56,7 +58,8 @@ export class ChainModel {
     this.bip44,
     this.explorers.map(x => x.toCompressedJson()),
     this.staticFee,
-    this.assetTypes.map(x => x.toCompressedJson()),    
+    this.assetTypes.map(x => x.toCompressedJson()),
+    this.bip21,
   ];
 
   static fromCompressedJson = (data: Array<any>) => {
@@ -67,6 +70,7 @@ export class ChainModel {
     const bip44 = data[4];
     const explorers = data[5].map(x => ExplorerModel.fromCompressedJson(x));
     const staticFee = data[6];
+    const bip21 = data[7];
     const chain = new ChainModel(
       id,
       name,
@@ -76,6 +80,7 @@ export class ChainModel {
       bip44,
       explorers,
       staticFee,
+      bip21,
     );
     chain.assetTypes = data[7].map(x => AssetTypeModel.fromCompressedJson(x, chain));
     return chain;

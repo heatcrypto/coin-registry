@@ -9,5 +9,6 @@
   "assetTypes": [{
     "id":1,
     "name":"FIMK Asset"
-  }]
+  }],
+  "bip21": "fimk"
 }
