@@ -10,5 +10,7 @@
     "id":1,
     "name":"FIMK Asset"
   }],
-  "bip21": "fimk"
+  "bip21": "fimk",
+  "confirmed": 10,
+  "blockTime": 45
 }

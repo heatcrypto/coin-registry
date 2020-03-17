@@ -7,5 +7,7 @@
     "tx": "https://live.blockcypher.com/btc-testnet/tx/$1/",
     "addr":"https://live.blockcypher.com/btc-testnet/address/$1/"
   }],
-  "bip21": "bitcointestnet"
+  "bip21": "bitcointestnet",
+  "confirmed": 3,
+  "blockTime": 600
 }

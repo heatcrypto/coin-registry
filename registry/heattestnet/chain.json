@@ -8,5 +8,7 @@
     "id":1,
     "name":"HEAT Testnet Asset"
   }],
-  "bip21": "heattestnet"
+  "bip21": "heattestnet",
+  "confirmed": 30,
+  "blockTime": 30    
 }

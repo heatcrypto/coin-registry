@@ -10,5 +10,7 @@
     "id":1,
     "name":"Ethereum Erc20"
   }],
-  "bip21": "ethereum"
+  "bip21": "ethereum",
+  "confirmed": 60,
+  "blockTime": 20  
 }

@@ -11,5 +11,7 @@
     "id":1,
     "name":"HEAT Asset"
   }],
-  "bip21": "heat"
+  "bip21": "heat",
+  "confirmed": 30,
+  "blockTime": 30  
 }

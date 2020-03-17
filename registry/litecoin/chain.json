@@ -7,5 +7,7 @@
     "tx": "https://live.blockcypher.com/ltc/tx/$1/",
     "addr": "https://live.blockcypher.com/ltc/address/$1/"
   }],
-  "bip21": "litecoin"
+  "bip21": "litecoin",
+  "confirmed": 5,
+  "blockTime": 150    
 }
