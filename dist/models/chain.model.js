@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const explorer_model_1 = require("./explorer.model");
 const asset_type_model_1 = require("./asset-type.model");
 class ChainModel {
-    constructor(id, name, addressTypes, network, assetTypes, bip44, explorers, staticFee, bip21) {
+    constructor(id, name, addressTypes, network, assetTypes, bip44, explorers, staticFee, bip21, confirmed, blockTime) {
         this.id = id;
         this.name = name;
         this.addressTypes = addressTypes;
@@ -13,6 +13,8 @@ class ChainModel {
         this.explorers = explorers;
         this.staticFee = staticFee;
         this.bip21 = bip21;
+        this.confirmed = confirmed;
+        this.blockTime = blockTime;
         this.toCompressedJson = () => [
             this.id,
             this.name,
@@ -23,16 +25,18 @@ class ChainModel {
             this.staticFee,
             this.assetTypes.map(x => x.toCompressedJson()),
             this.bip21,
+            this.confirmed,
+            this.blockTime
         ];
     }
 }
 exports.ChainModel = ChainModel;
 ChainModel.fromJson = (json, id) => {
-    let { name, addressTypes, bip44, explorers, assetTypes, network, staticFee, bip21 } = json;
+    let { name, addressTypes, bip44, explorers, assetTypes, network, staticFee, bip21, confirmed, blockTime } = json;
     addressTypes = addressTypes || ["0"];
     explorers = explorers || [];
     assetTypes = assetTypes || [];
-    const chain = new ChainModel(id, name, addressTypes, network, [], bip44, [], staticFee, bip21);
+    const chain = new ChainModel(id, name, addressTypes, network, [], bip44, [], staticFee, bip21, confirmed, blockTime);
     chain.assetTypes = assetTypes.map(x => asset_type_model_1.AssetTypeModel.fromJson(x, chain));
     chain.explorers = explorers.map(x => explorer_model_1.ExplorerModel.fromJson(x));
     if (!chain.assetTypes.find(x => x.id === 0)) {
@@ -53,8 +57,10 @@ ChainModel.fromCompressedJson = (data) => {
     const bip44 = data[4];
     const explorers = data[5].map(x => explorer_model_1.ExplorerModel.fromCompressedJson(x));
     const staticFee = data[6];
-    const bip21 = data[7];
-    const chain = new ChainModel(id, name, addressTypes, network, [], bip44, explorers, staticFee, bip21);
+    const bip21 = data[8];
+    const confirmed = data[9];
+    const blockTime = data[10];
+    const chain = new ChainModel(id, name, addressTypes, network, [], bip44, explorers, staticFee, bip21, confirmed, blockTime);
     chain.assetTypes = data[7].map(x => asset_type_model_1.AssetTypeModel.fromCompressedJson(x, chain));
     return chain;
 };
