@@ -9,5 +9,6 @@
   }],
   "bip21": "litecoin",
   "confirmed": 5,
-  "blockTime": 150    
+  "blockTime": 150,
+  "publicKeyType": "secp256k1"
 }

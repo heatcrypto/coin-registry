@@ -12,7 +12,7 @@ const chainsFile = path.join(registryDir, 'chains.json')
 
 async function build() {
   const indexJson = JSON.parse(await fs.readFile(chainsFile, 'utf8'));
-  await validateChainsJson(indexJson)
+  validateChainsJson(indexJson)
 
   const chains:Array<ChainModel> = []
   const chainKeys = Object.keys(indexJson)
@@ -28,7 +28,7 @@ async function build() {
 
     // We build the chains model
     const chainModel = ChainModel.fromJson(chainJson, id)
-    await validateChainModel(chainModel, chainDir)
+    validateChainModel(chainModel, chainDir)
 
     // Process each asset type
     for (let j = 0; j < chainModel.assetTypes.length; j++) {
@@ -69,7 +69,7 @@ async function build() {
  * 
  * @param chainsJson 
  */
-async function validateChainsJson(chainsJson: Map<String, number>) {
+function validateChainsJson(chainsJson: Map<String, number>) {
   let duplicates = new Set<number>()
   let keys = Object.keys(chainsJson)
   for (let i = 0; i < keys.length; i++) {

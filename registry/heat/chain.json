@@ -13,5 +13,6 @@
   }],
   "bip21": "heat",
   "confirmed": 30,
-  "blockTime": 30  
+  "blockTime": 30,
+  "publicKeyType": "curve25519"
 }

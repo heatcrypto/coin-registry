@@ -12,5 +12,6 @@
   }],
   "bip21": "ethereum",
   "confirmed": 60,
-  "blockTime": 20  
+  "blockTime": 20,
+  "publicKeyType": "secp256k1Extended"
 }

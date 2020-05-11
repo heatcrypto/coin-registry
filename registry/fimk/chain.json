@@ -12,5 +12,6 @@
   }],
   "bip21": "fimk",
   "confirmed": 10,
-  "blockTime": 45
+  "blockTime": 45,
+  "publicKeyType": "curve25519"
 }

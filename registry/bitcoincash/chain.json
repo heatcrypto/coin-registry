@@ -9,5 +9,6 @@
   }],
   "bip21": "bitcoincash",
   "confirmed": 3,
-  "blockTime": 600  
+  "blockTime": 600,
+  "publicKeyType": "secp256k1"
 }

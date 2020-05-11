@@ -19,7 +19,7 @@ const distDir = path.join(__dirname, '..', 'dist');
 const chainsFile = path.join(registryDir, 'chains.json');
 async function build() {
     const indexJson = JSON.parse(await fs.readFile(chainsFile, 'utf8'));
-    await validateChainsJson(indexJson);
+    validateChainsJson(indexJson);
     const chains = [];
     const chainKeys = Object.keys(indexJson);
     console.log(`Processing a total of ${chainKeys.length} chains`);
@@ -31,7 +31,7 @@ async function build() {
         const chainJsonFile = path.join(chainDir, 'chain.json');
         const chainJson = JSON.parse(await fs.readFile(chainJsonFile, 'utf8'));
         const chainModel = chain_model_1.ChainModel.fromJson(chainJson, id);
-        await validateChainModel(chainModel, chainDir);
+        validateChainModel(chainModel, chainDir);
         for (let j = 0; j < chainModel.assetTypes.length; j++) {
             const assetTypeModel = chainModel.assetTypes[j];
             const assetTypeDir = path.join(chainDir, `${assetTypeModel.id}`);
@@ -58,7 +58,7 @@ async function build() {
     await fs.writeFile(registryFile, JSON.stringify(compressedJson), 'utf-8');
     console.log(`Done`);
 }
-async function validateChainsJson(chainsJson) {
+function validateChainsJson(chainsJson) {
     let duplicates = new Set();
     let keys = Object.keys(chainsJson);
     for (let i = 0; i < keys.length; i++) {

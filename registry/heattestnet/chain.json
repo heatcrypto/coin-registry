@@ -10,5 +10,6 @@
   }],
   "bip21": "heattestnet",
   "confirmed": 30,
-  "blockTime": 30    
+  "blockTime": 30,
+  "publicKeyType": "curve25519"
 }
