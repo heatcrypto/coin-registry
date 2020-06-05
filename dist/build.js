@@ -14,7 +14,7 @@ const chain_model_1 = require("./models/chain.model");
 const currency_model_1 = require("./models/currency.model");
 const get_dirs_1 = require("./utils/get-dirs");
 const fs = _fs.promises;
-const registryDir = path.join(__dirname, '..', 'registry');
+const registryDir = path.join(__dirname, '..', 'coin-registry');
 const distDir = path.join(__dirname, '..', 'dist');
 const chainsFile = path.join(registryDir, 'chains.json');
 async function build() {

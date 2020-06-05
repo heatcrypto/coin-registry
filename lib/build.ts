@@ -6,7 +6,7 @@ import { CurrencyModel } from './models/currency.model'
 import { getDirs } from './utils/get-dirs'
 const fs = _fs.promises
 
-const registryDir = path.join(__dirname, '..', 'registry')
+const registryDir = path.join(__dirname, '..', 'coin-registry')
 const distDir = path.join(__dirname, '..', 'dist')
 const chainsFile = path.join(registryDir, 'chains.json')
 
