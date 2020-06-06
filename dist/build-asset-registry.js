@@ -16,13 +16,18 @@ const fs = _fs.promises;
 const distDir = path.join(__dirname, '..', 'dist');
 const heatPoolDir = path.join(__dirname, '..', 'asset-registry', 'heat-pool');
 async function build() {
-    await buildHeatPool();
+    const assetsJson = {
+        'heat-pool': await buildHeatPool()
+    };
+    const registryFile = path.join(distDir, 'asset-registry.json');
+    await fs.writeFile(registryFile, JSON.stringify(assetsJson), 'utf-8');
+    console.log(`Done`);
 }
 exports.build = build;
 async function buildHeatPool() {
     const poolAddresses = (await get_dirs_1.getDirs(heatPoolDir)).map(dir => path.basename(dir));
     const pools = [];
-    console.log(`Processing a total of ${poolAddresses.length} pool`);
+    console.log(`Processing a total of ${poolAddresses.length} heat-pool`);
     for (let i = 0; i < poolAddresses.length; i++) {
         const poolAddress = poolAddresses[i];
         console.log(`[${i + 1} of ${poolAddresses.length}] Processing pool "${poolAddress}"`);
@@ -42,9 +47,7 @@ async function buildHeatPool() {
     pools.forEach(pool => {
         compressedJson.push(pool.toCompressedJson());
     });
-    console.log(`Done collecting data, writing heat-pool-registry.json`);
-    const registryFile = path.join(distDir, 'heat-pool-registry.json');
-    await fs.writeFile(registryFile, JSON.stringify(compressedJson), 'utf-8');
-    console.log(`Done`);
+    console.log(`Done collecting heat-pool data`);
+    return compressedJson;
 }
 //# sourceMappingURL=build-asset-registry.js.map
