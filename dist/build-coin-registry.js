@@ -75,6 +75,7 @@ function validateChainsJson(chainsJson) {
             throw new Error(`Missing directory ${dir} for key ${name}`);
     }
 }
+exports.validateChainsJson = validateChainsJson;
 function validateChainModel(chainModel, chainDir) {
     let duplicates = new Set();
     let assetTypeIds = chainModel.assetTypes.map(x => x.id);
@@ -88,4 +89,5 @@ function validateChainModel(chainModel, chainDir) {
             throw new Error(`Missing directory for asset type at ${dir}`);
     }
 }
+exports.validateChainModel = validateChainModel;
 //# sourceMappingURL=build-coin-registry.js.map

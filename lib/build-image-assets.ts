@@ -1,7 +1,7 @@
 import * as _ from 'lodash'
 import * as path from 'path'
 import * as _fs from 'fs'
-import * as _fsExtra from 'fs-extra';
+const _fsExtra = require('fs-extra');
 import { ChainModel } from './models/chain.model'
 import { validateChainsJson, validateChainModel } from './build-coin-registry';
 const fs = _fs.promises
@@ -32,7 +32,8 @@ export async function build() {
     validateChainModel(chainModel, chainDir)
 
     const sourceImage = path.join(chainDir, '0', '0', 'logo.png')
-    const destImage = path.join(distDir, 'assets', 'icons', `${chainModel.id}`, '0', '0', 'logo.png')
+    const destImage = path.join(distDir, 'assets', 'icons', `${chainModel.id}_logo.png`)
+    await fs.mkdir(path.dirname(destImage), { recursive: true })
     await fsExtra.copyFile(sourceImage, destImage)
   }
   console.log(`Done`)
