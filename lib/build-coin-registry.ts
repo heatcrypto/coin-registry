@@ -69,7 +69,7 @@ export async function build() {
  * 
  * @param chainsJson 
  */
-function validateChainsJson(chainsJson: Map<String, number>) {
+export function validateChainsJson(chainsJson: Map<String, number>) {
   let duplicates = new Set<number>()
   let keys = Object.keys(chainsJson)
   for (let i = 0; i < keys.length; i++) {
@@ -91,7 +91,7 @@ function validateChainsJson(chainsJson: Map<String, number>) {
  * We enforce no duplicate asset types exist.
  * @param chainModel 
  */
-function validateChainModel(chainModel: ChainModel, chainDir: string) {
+export function validateChainModel(chainModel: ChainModel, chainDir: string) {
   let duplicates = new Set<number>();
   let assetTypeIds = chainModel.assetTypes.map(x => x.id)
   for (let i = 0; i < assetTypeIds.length; i++) {
