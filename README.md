@@ -74,7 +74,7 @@ Ultimately the `coin-registry` is about identifying individual currencies a wall
 
 As each currency belongs to a chain and each currency has an asset type. We declare currencies `beneath` their asset types and identify them by their unique identifier on their respective platforms (for erc20 this would be their contract address).
 
-The currency id is derived from their parent folder (see example [`registry/ethereum/1/0x170b275CEd089FffAEBFe927F445a350ED9160DC`](https://github.com/heatcrypto/coin-registry/tree/master/registry/ethereum/1/0x170b275CEd089FffAEBFe927F445a350ED9160DC)).
+The currency id is derived from their parent folder (see example [`registry/ethereum/1/0x170b275CEd089FffAEBFe927F445a350ED9160DC`](https://github.com/heatcrypto/coin-registry/tree/master/coin-registry/ethereum/1/0x170b275CEd089FffAEBFe927F445a350ED9160DC)).
 
 Inside each currency folder we find a file named `currency.json` and one named `logo.png`. The currency.json looks as follows.
 
