@@ -9,7 +9,7 @@ import * as path from 'path'
 import { downloadJson, downloadFile } from '../utils/download';
 import { getDirs } from '../utils/get-dirs';
 const tokenListUrl = 'https://raw.githubusercontent.com/MyEtherWallet/ethereum-lists/master/dist/tokens/eth/tokens-eth.json'
-const registryDir = path.join(__dirname, '..', '..', 'registry')
+const registryDir = path.join(__dirname, '..', '..', 'coin-registry')
 const ethereumTokenDir = path.join(registryDir, 'ethereum', '1')
 
 async function run() {

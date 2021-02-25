@@ -13,7 +13,7 @@ const path = __importStar(require("path"));
 const download_1 = require("../utils/download");
 const get_dirs_1 = require("../utils/get-dirs");
 const tokenListUrl = 'https://raw.githubusercontent.com/MyEtherWallet/ethereum-lists/master/dist/tokens/eth/tokens-eth.json';
-const registryDir = path.join(__dirname, '..', '..', 'registry');
+const registryDir = path.join(__dirname, '..', '..', 'coin-registry');
 const ethereumTokenDir = path.join(registryDir, 'ethereum', '1');
 async function run() {
     console.log(`Downloading MEW token list`);
