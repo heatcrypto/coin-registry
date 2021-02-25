@@ -1,4 +1,6 @@
-# HEATpool.org - Forging towards the sunset!
+# HEATpool.org
+<small>Forging towards the sunset!</small>
+
 HEATpool.org is the longest running HEAT staking pool, operating since December 2017. That was shortly after balance leasing was released as a feature on the HEAT blockchain. What started fully manually (with daily checks on rewards using Excel), was upgraded to an automated setup in October 2020. Leasing to HEATpool gives you the confidence that you don't have to worry about maintaining your forging node and (re-)registering as masternode when the POP awards expire.
 
 ## Payouts twice per day
