@@ -1,6 +1,6 @@
 {
   "name": "Bitcoin",
-  "addressTypes": ["p2pkh"],
+  "addressTypes": ["p2pkh","p2wpkh_in_p2sh","p2wpkh"],
   "network": "bitcoin",
   "bip44": 0,
   "explorers": [{

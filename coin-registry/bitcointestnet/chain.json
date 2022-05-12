@@ -1,6 +1,6 @@
 {
   "name": "Bitcoin Testnet",
-  "addressTypes": ["p2pkh"],
+  "addressTypes": ["p2pkh","p2wpkh_in_p2sh","p2wpkh"],
   "network": "testnet",
   "bip44": 1,
   "explorers": [{

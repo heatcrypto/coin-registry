@@ -1,6 +1,6 @@
 {
   "name": "Litecoin",
-  "addressTypes": ["p2pkh"],
+  "addressTypes": ["p2pkh","p2wpkh_in_p2sh","p2wpkh"],
   "network": "litecoin",
   "bip44": 2,
   "explorers": [{
