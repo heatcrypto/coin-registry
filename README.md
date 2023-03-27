@@ -92,3 +92,33 @@ To validate and build the `registry.json` we run a script. `npm run build` in ca
 The resulting registry can be found in the dist folder.
 
 
+Blockchain	Time Between Blocks (s)	Blocks for Finality	Certainty (%)
+Bitcoin	600	6	95
+Ethereum	15	12	95
+Heat	30	10	80
+Litecoin	150	6	95
+Bitcoin Cash	600	6	95
+FIMK	30	10	80
+Heat Testnet	30	10	80
+Bitcoin Testnet	600	6	95
+Polygon	2	50	95
+Fantom	1	50	95
+Binance Smart Chain	3	12	95
+Avalanche	3	80	95
+Arbitrum	1	100	90
+Optimism	15	35	90
+Solana	0.4	50	95
+Gnosis	N/A	N/A	N/A
+Celo	5	100	90
+Aptos	N/A	N/A	N/A
+Moonbeam	6	50	90
+Harmony	2	50	90
+Tron	3	19	90
+Syscoin	60	6	90
+Filecoin	30	5	90
+Polkadot	6	50	95
+Kusama	6	50	95
+Ethereum Goerli	15	12	95
+Polygon Mumbai	2	50	95
+Avalanche Fuji	3	80	95
+Dogecoin	60	6	95

@@ -1,0 +1,13 @@
+{
+  "name": "Dogecoin",
+  "addressTypes": ["p2pkh","p2wpkh_in_p2sh","p2wpkh"],
+  "network": "dogecoin",
+  "bip44": 3,
+  "explorers": [{
+    "tx":"https://blockchair.com/dogecoin/transaction/$1",
+    "addr":"https://blockchair.com/dogecoin/address/$1"
+  }],
+  "bip21": "dogecoin",
+  "confirmed": 6,
+  "blockTime": 60
+}

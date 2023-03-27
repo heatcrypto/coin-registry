@@ -1,0 +1,16 @@
+{
+  "name": "Polygon",
+  "addressTypes":["0"],
+  "bip44": 60,
+  "explorers": [{
+    "tx": "https://polygonscan.com/tx/$1",
+    "addr": "https://polygonscan.com/address/$1"
+  }],
+  "assetTypes": [{
+    "id":1,
+    "name":"Erc20"
+  }],
+  "confirmed": 50,
+  "blockTime": 1,
+  "chainId": 137
+}

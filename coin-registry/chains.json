@@ -6,5 +6,19 @@
   "bitcoincash": 4,
   "fimk": 5,
   "heattestnet": 6,
-  "bitcointestnet": 7
+  "bitcointestnet": 7,
+  "polygon":8,
+  "fantom":9,
+  "binance_smart_chain":10,
+  "avalanche":11,
+  "arbitrum":12,
+  "optimism":13,
+  "solana":14,
+  "gnosis":15,
+  "celo":16,
+  "aptos":17,
+  "moonbeam":18,
+  "harmony":19,
+  "tron":20,
+  "dogecoin":28
 }

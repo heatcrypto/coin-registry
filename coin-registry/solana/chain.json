@@ -1,0 +1,15 @@
+{
+  "name": "Solana",
+  "addressTypes":["0"],
+  "bip44": 501,
+  "explorers": [{
+    "tx": "https://explorer.solana.com/tx/$1",
+    "addr": "https://explorer.solana.com/address/$1"
+  }],
+  "assetTypes": [{
+    "id":1,
+    "name":"SPL-token"
+  }],
+  "confirmed": 60,
+  "blockTime": 20
+}

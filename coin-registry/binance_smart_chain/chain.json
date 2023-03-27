@@ -1,0 +1,16 @@
+{
+  "name": "BNB Smart Chain",
+  "addressTypes":["0"],
+  "bip44": 60,
+  "explorers": [{
+    "tx": "https://bscscan.com/tx/$1",
+    "addr": "https://bscscan.com/address/$1"
+  }],
+  "assetTypes": [{
+    "id":1,
+    "name":"BEP20"
+  }],
+  "confirmed": 12,
+  "blockTime": 3,
+  "chainId": 56
+}

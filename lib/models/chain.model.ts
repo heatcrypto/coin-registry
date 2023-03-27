@@ -3,6 +3,10 @@ import { AssetTypeModel } from './asset-type.model';
 import { isNumber } from 'util';
 
 /// These maps human readable public key types to the actual numbers used wallet-core
+/**
+ * @deprecated instead always pass 0, when we update the client side coin-registry parser
+ *  remove this feature entirely
+ */
 const publicKeyTypes = {
   secp256k1: 0,
   secp256k1Extended: 1,
@@ -39,9 +43,12 @@ export class ChainModel {
     addressTypes = addressTypes || ["0"];
     explorers = explorers || []
     assetTypes = assetTypes || []
+    /*
     const publicKeyTypeNumeric = publicKeyTypes[publicKeyType]
     if (!isNumber(publicKeyTypeNumeric)) 
       throw new Error(`Invalid publicKeyType '${publicKeyType}'`)
+    */
+    const publicKeyTypeNumeric = 0
     const chain = new ChainModel(
       id,
       name,

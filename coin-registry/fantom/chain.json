@@ -1,0 +1,16 @@
+{
+  "name": "Fantom",
+  "addressTypes":["0"],
+  "bip44": 60,
+  "explorers": [{
+    "tx": "https://ftmscan.com/tx/$1",
+    "addr": "https://ftmscan.com/address/$1"
+  }],
+  "assetTypes": [{
+    "id":1,
+    "name":"Erc20"
+  }],
+  "confirmed": 60,
+  "blockTime": 2,
+  "chainId": 250
+}

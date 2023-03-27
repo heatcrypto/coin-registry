@@ -1,0 +1,16 @@
+{
+  "name": "TRON",
+  "addressTypes":["0"],
+  "bip44": 195,
+  "explorers": [{
+    "tx": "https://tronscan.io/#/transaction/$1",
+    "addr": "https://tronscan.io/#/address/$1"
+  }],
+  "assetTypes": [{
+    "id":1,
+    "name":"TRC-20"
+  }],
+  "confirmed": 20,
+  "blockTime": 3,
+  "chainId": 1
+}

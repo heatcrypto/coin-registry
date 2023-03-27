@@ -1,0 +1,16 @@
+{
+  "name": "Moonbeam",
+  "addressTypes":["0"],
+  "bip44": 1284,
+  "explorers": [{
+    "tx": "https://moonscan.io/tx/$1",
+    "addr": "https://moonscan.io/address/$1"
+  }],
+  "assetTypes": [{
+    "id":1,
+    "name":"ERC20"
+  }],
+  "confirmed": 50,
+  "blockTime": 6,
+  "chainId": 1284
+}

@@ -1,0 +1,16 @@
+{
+  "name": "Harmony",
+  "addressTypes":["0"],
+  "bip44": 1023,
+  "explorers": [{
+    "tx": "https://explorer.harmony.one/tx/$1",
+    "addr": "https://explorer.harmony.one/address/$1"
+  }],
+  "assetTypes": [{
+    "id":1,
+    "name":"HRC-20"
+  }],
+  "confirmed": 60,
+  "blockTime": 2,
+  "chainId": 1666600000
+}

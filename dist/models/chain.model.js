@@ -2,7 +2,6 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const explorer_model_1 = require("./explorer.model");
 const asset_type_model_1 = require("./asset-type.model");
-const util_1 = require("util");
 const publicKeyTypes = {
     secp256k1: 0,
     secp256k1Extended: 1,
@@ -49,9 +48,7 @@ ChainModel.fromJson = (json, id) => {
     addressTypes = addressTypes || ["0"];
     explorers = explorers || [];
     assetTypes = assetTypes || [];
-    const publicKeyTypeNumeric = publicKeyTypes[publicKeyType];
-    if (!util_1.isNumber(publicKeyTypeNumeric))
-        throw new Error(`Invalid publicKeyType '${publicKeyType}'`);
+    const publicKeyTypeNumeric = 0;
     const chain = new ChainModel(id, name, addressTypes, network, [], bip44, [], staticFee, bip21, confirmed, blockTime, publicKeyTypeNumeric);
     chain.assetTypes = assetTypes.map(x => asset_type_model_1.AssetTypeModel.fromJson(x, chain));
     chain.explorers = explorers.map(x => explorer_model_1.ExplorerModel.fromJson(x));

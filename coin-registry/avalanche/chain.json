@@ -1,0 +1,16 @@
+{
+  "name": "Avalanche C-Chain",
+  "addressTypes":["0"],
+  "bip44": 60,
+  "explorers": [{
+    "tx": "https://snowtrace.io/tx/$1",
+    "addr": "https://snowtrace.io/address/$1"
+  }],
+  "assetTypes": [{
+    "id":1,
+    "name":"ERC20"
+  }],
+  "confirmed": 80,
+  "blockTime": 3,
+  "chainId": 43114
+}

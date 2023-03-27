@@ -69,4 +69,35 @@ async function downloadLogoFromTrustAssets(address:string, logoPngFile:string):P
   return _fs.existsSync(logoPngFile)
 }
 
+/**
+ * Maps the numbers for the chains listed in coin-registry/chains.json to their names on the 
+ */
+// function chainNumberToMewChainName(chainNumber: number) {
+//   switch (chainNumber) {
+//     // "polygon":8,
+//     case 8: return 'matic'
+//     // "fantom":9,
+//     case 9: return 
+//     // "binance_smart_chain":10,
+//     // "avalanche":11,
+//     // "arbitrum":12,
+//     // "optimism":13,
+//     // "solana":14,
+//     // "gnosis":15,
+//     // "celo":16,
+//     // "aptos":17,
+//     // "moonbeam":18,
+//     // "harmony":19,
+//     // "tron":20,
+//     // "syscoin":21,
+//     // "filecoin":22,
+//     // "polkadot":23,
+//     // "kusame":24,
+//     // "ethereum_goerli":25,
+//     // "polygon_mumbai":26,
+//     // "avalanche_fuji":27
+//   }
+// }
+
+
 run();

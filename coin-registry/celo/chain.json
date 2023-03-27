@@ -1,0 +1,16 @@
+{
+  "name": "Celo Mainnet",
+  "addressTypes":["0"],
+  "bip44": 52752,
+  "explorers": [{
+    "tx": "https://explorer.celo.org/mainnet/tx/$1",
+    "addr": "https://explorer.celo.org/mainnet/address/$1"
+  }],
+  "assetTypes": [{
+    "id":1,
+    "name":"ERC20"
+  }],
+  "confirmed": 100,
+  "blockTime": 5,
+  "chainId": 100
+}

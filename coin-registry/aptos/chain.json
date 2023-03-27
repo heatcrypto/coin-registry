@@ -1,0 +1,16 @@
+{
+  "name": "Aptos",
+  "addressTypes":["0"],
+  "bip44": 513,
+  "explorers": [{
+    "tx": "https://explorer.aptoslabs.com/txn/$1",
+    "addr": "https://explorer.aptoslabs.com/account/$1"
+  }],
+  "assetTypes": [{
+    "id":1,
+    "name":"APT-20"
+  }],
+  "confirmed": 60,
+  "blockTime": 4,
+  "chainId": 512
+}

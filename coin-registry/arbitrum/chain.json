@@ -1,0 +1,16 @@
+{
+  "name": "Arbitrum One",
+  "addressTypes":["0"],
+  "bip44": 60,
+  "explorers": [{
+    "tx": "https://arbiscan.io/tx/$1",
+    "addr": "https://arbiscan.io/address/$1"
+  }],
+  "assetTypes": [{
+    "id":1,
+    "name":"ERC20"
+  }],
+  "confirmed": 50,
+  "blockTime": 1,
+  "chainId": 42161
+}

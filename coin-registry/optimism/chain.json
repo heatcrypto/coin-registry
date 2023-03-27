@@ -1,0 +1,16 @@
+{
+  "name": "Optimistic Ethereum",
+  "addressTypes":["0"],
+  "bip44": 60,
+  "explorers": [{
+    "tx": "https://optimistic.etherscan.io/tx/$1",
+    "addr": "https://optimistic.etherscan.io/address/$1"
+  }],
+  "assetTypes": [{
+    "id":1,
+    "name":"ERC20"
+  }],
+  "confirmed": 35,
+  "blockTime": 15,
+  "chainId": 10
+}
