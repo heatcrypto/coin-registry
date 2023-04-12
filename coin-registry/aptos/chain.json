@@ -1,7 +1,7 @@
 {
   "name": "Aptos",
   "addressTypes":["0"],
-  "bip44": 513,
+  "bip44": 637,
   "explorers": [{
     "tx": "https://explorer.aptoslabs.com/txn/$1",
     "addr": "https://explorer.aptoslabs.com/account/$1"

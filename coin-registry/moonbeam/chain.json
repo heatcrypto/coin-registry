@@ -1,7 +1,7 @@
 {
   "name": "Moonbeam",
   "addressTypes":["0"],
-  "bip44": 1284,
+  "bip44": 60,
   "explorers": [{
     "tx": "https://moonscan.io/tx/$1",
     "addr": "https://moonscan.io/address/$1"

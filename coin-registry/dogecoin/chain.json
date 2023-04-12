@@ -1,6 +1,6 @@
 {
   "name": "Dogecoin",
-  "addressTypes": ["p2pkh","p2wpkh_in_p2sh"],
+  "addressTypes": ["p2pkh"],
   "network": "dogecoin",
   "bip44": 3,
   "explorers": [{
