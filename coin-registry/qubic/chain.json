@@ -1,0 +1,12 @@
+{
+  "name": "Qubic",
+  "addressTypes":["0"],
+  "bip44": 83293,
+  "explorers": [{
+    "tx": "https://explorer.qubic.org/network/tx/$1",
+    "addr": "https://explorer.qubic.org/network/address/$1"
+  }],
+  "assetTypes": [],
+  "confirmed": 1,
+  "blockTime": 1
+}
