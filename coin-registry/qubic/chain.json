@@ -6,7 +6,10 @@
     "tx": "https://explorer.qubic.org/network/tx/$1",
     "addr": "https://explorer.qubic.org/network/address/$1"
   }],
-  "assetTypes": [],
+  "assetTypes": [{
+    "id":1,
+    "name":"Qubic Asset"
+  }],
   "confirmed": 1,
   "blockTime": 1
 }
