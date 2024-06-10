@@ -10,6 +10,6 @@
     "id":1,
     "name":"Qubic Asset"
   }],
-  "confirmed": 1,
-  "blockTime": 1
+  "confirmed": 30,
+  "blockTime": 30
 }
