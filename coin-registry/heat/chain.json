@@ -9,7 +9,7 @@
   "staticFee": "0.01",
   "assetTypes": [{
     "id":1,
-    "name":"HEAT Asset"
+    "name":"Asset"
   }],
   "bip21": "heat",
   "confirmed": 30,

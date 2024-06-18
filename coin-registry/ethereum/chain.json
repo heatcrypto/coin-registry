@@ -8,7 +8,7 @@
   }],
   "assetTypes": [{
     "id":1,
-    "name":"Ethereum Erc20"
+    "name":"ERC20"
   }],
   "bip21": "ethereum",
   "confirmed": 12,

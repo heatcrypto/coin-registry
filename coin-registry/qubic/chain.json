@@ -8,8 +8,8 @@
   }],
   "assetTypes": [{
     "id":1,
-    "name":"Qubic Asset"
+    "name":"QX Asset"
   }],
-  "confirmed": 30,
+  "confirmed": 1,
   "blockTime": 30
 }

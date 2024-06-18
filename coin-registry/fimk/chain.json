@@ -8,7 +8,7 @@
   "staticFee": "0.1",
   "assetTypes": [{
     "id":1,
-    "name":"FIMK Asset"
+    "name":"Asset"
   }],
   "bip21": "fimk",
   "confirmed": 10,

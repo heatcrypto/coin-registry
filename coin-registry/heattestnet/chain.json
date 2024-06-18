@@ -6,7 +6,7 @@
   "staticFee": "0.01",
   "assetTypes": [{
     "id":1,
-    "name":"HEAT Testnet Asset"
+    "name":"Asset"
   }],
   "bip21": "heattestnet",
   "confirmed": 30,

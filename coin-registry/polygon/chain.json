@@ -8,7 +8,7 @@
   }],
   "assetTypes": [{
     "id":1,
-    "name":"Erc20"
+    "name":"ERC20"
   }],
   "confirmed": 50,
   "blockTime": 1,
